@@ -21,7 +21,11 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'Shopping List',
+          style: TextStyle(
+            color: Colors.white,
+          ),
         ),
+        backgroundColor: Colors.indigo,
       ),
       body: SingleChildScrollView(
         // Widget wrapper yang dapat discroll
