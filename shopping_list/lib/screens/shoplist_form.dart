@@ -51,6 +51,10 @@ class _ShopFormPageState extends State<ShopFormPage> {
                       },
                       validator: (String? value) {
                         if (value == null || value.isEmpty) {
+                          ScaffoldMessenger.of(context)
+                          ..hideCurrentSnackBar()
+                          ..showSnackBar(SnackBar(
+                          content: Text("Nama tidak boleh kosong!")));
                           return "Nama tidak boleh kosong!";
                         }
                         return null;
@@ -75,9 +79,17 @@ class _ShopFormPageState extends State<ShopFormPage> {
                       },
                       validator: (String? value) {
                         if (value == null || value.isEmpty) {
+                          ScaffoldMessenger.of(context)
+                          ..hideCurrentSnackBar()
+                          ..showSnackBar(SnackBar(
+                          content: Text("Harga tidak boleh kosong!")));
                           return "Harga tidak boleh kosong!";
                         }
                         if (int.tryParse(value) == null) {
+                          ScaffoldMessenger.of(context)
+                          ..hideCurrentSnackBar()
+                          ..showSnackBar(SnackBar(
+                          content: Text("Harga harus berupa angka!")));
                           return "Harga harus berupa angka!";
                         }
                         return null;
@@ -102,6 +114,10 @@ class _ShopFormPageState extends State<ShopFormPage> {
                       },
                       validator: (String? value) {
                         if (value == null || value.isEmpty) {
+                          ScaffoldMessenger.of(context)
+                          ..hideCurrentSnackBar()
+                          ..showSnackBar(SnackBar(
+                          content: Text("Deskripsi tidak boleh kosong!")));
                           return "Deskripsi tidak boleh kosong!";
                         }
                         return null;
